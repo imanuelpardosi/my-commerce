@@ -13,8 +13,13 @@ struct CategoryProductModel: Codable {
 }
 
 struct CategoryProductData: Codable {
-    var category: CategoryData
-    var product: ProductData
+    var category: [CategoryData]
+    var product: [ProductData]
+    
+    private enum CodingKeys: String, CodingKey {
+        case category
+        case product = "productPromo"
+    }
 }
 
 struct CategoryData: Codable {

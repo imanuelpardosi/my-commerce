@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "C8020A89-983D-4E08-A907-1AB92BCFEFB7"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C184196D-FC22-455C-B5B5-16E03BC28C9E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "my-commerce/Service/APIManagers/Requestable.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "request(method:url:params:callback:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C184196D-FC22-455C-B5B5-16E03BC28C9E - e84734d91cb0c85b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(extension in my_commerce):my_commerce.Requestable.request(method: my_commerce.Method, url: Swift.String, params: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, callback: (my_commerce.Result&lt;Foundation.Data&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "my-commerce"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fundtastic/ipardosi/SehatQ/my-commerce/my-commerce/Service/APIManagers/Requestable.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "1277">
+               </Location>
+               <Location
+                  uuid = "C184196D-FC22-455C-B5B5-16E03BC28C9E - 56d8fd96a89af95b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in (extension in my_commerce):my_commerce.Requestable.request(method: my_commerce.Method, url: Swift.String, params: Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, callback: (my_commerce.Result&lt;Foundation.Data&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "my-commerce"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fundtastic/ipardosi/SehatQ/my-commerce/my-commerce/Service/APIManagers/Requestable.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "278">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7D95A8F0-6E3B-4DE3-8A77-7BD0D1B7C385"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "my-commerce/Service/APIManagers/Requestable.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "request(method:url:params:callback:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F34FEC93-00FF-426D-A679-7C2A9B5FFFCB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "my-commerce/Service/APIRequest.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "fetchCategoryAndProduct(callback:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F34FEC93-00FF-426D-A679-7C2A9B5FFFCB - bdb04d8c4a3f8215"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "my_commerce.APIRequest.fetchCategoryAndProduct(callback: (my_commerce.CategoryAndProductResult&lt;Swift.Array&lt;my_commerce.CategoryProductModel&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "my-commerce"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fundtastic/ipardosi/SehatQ/my-commerce/my-commerce/Service/APIRequest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "125">
+               </Location>
+               <Location
+                  uuid = "F34FEC93-00FF-426D-A679-7C2A9B5FFFCB - 27b18a60149d1c3b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (my_commerce.DefaultResult&lt;Foundation.Data&gt;) -&gt; () in my_commerce.APIRequest.fetchCategoryAndProduct(callback: (my_commerce.CategoryAndProductResult&lt;Swift.Array&lt;my_commerce.CategoryProductModel&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "my-commerce"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fundtastic/ipardosi/SehatQ/my-commerce/my-commerce/Service/APIRequest.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "246">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
