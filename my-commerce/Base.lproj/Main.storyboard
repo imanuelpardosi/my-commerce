@@ -296,6 +296,7 @@
                         <outlet property="categoryCollectionView" destination="qkA-uO-S0R" id="qeF-Ri-vEX"/>
                         <outlet property="productTableView" destination="lZt-MD-NuS" id="BZF-ju-Ope"/>
                         <outlet property="productTableViewHeight" destination="0RS-60-K4Y" id="e0j-UN-OEF"/>
+                        <outlet property="scrollView" destination="7f5-o0-ui4" id="21Y-0d-qaz"/>
                         <outlet property="searchBar" destination="Fnr-5h-wh4" id="1Lh-W3-AI0"/>
                         <segue destination="c9p-WN-VkJ" kind="show" identifier="goGoSearchPage" id="xu4-wn-p8z"/>
                     </connections>
@@ -447,6 +448,21 @@
             </objects>
             <point key="canvasLocation" x="-1642" y="2336"/>
         </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="Pqz-nr-12v">
+            <objects>
+                <viewController id="00t-vo-x98" customClass="DetailViewController" customModule="my_commerce" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LJf-SW-cf8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="5rk-Lf-F3e"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wyI-hk-MLE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-901" y="3076"/>
+        </scene>
         <!--Feed-->
         <scene sceneID="kud-4F-0Uc">
             <objects>
@@ -516,7 +532,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eWT-Ww-to3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="412" y="2336"/>
+            <point key="canvasLocation" x="-38" y="2336"/>
         </scene>
         <!--Purchased History View Controller-->
         <scene sceneID="dZ6-DS-wKj">
@@ -587,7 +603,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EXZ-Je-VZ6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1251" y="2336"/>
+            <point key="canvasLocation" x="826" y="2336"/>
         </scene>
         <!--Home-->
         <scene sceneID="pc2-D9-pDh">

@@ -9,12 +9,23 @@
 import Foundation
 
 class HomeViewModel: NSObject {
+   
     weak var delegate: HomeProtocol?
     var category = [CategoryData]()
     var product = [ProductData]()
     
+    private var isDataAlreadyAccessed = false
+    
+    var isDataExists: Bool {
+        get { return isDataAlreadyAccessed }
+        set (newVal) {
+            isDataAlreadyAccessed = newVal
+        }
+    }
+    
     func fetchCategoryAndProduct() {
         let apiRequest = APIRequest()
+        self.delegate?.willLoadData()
         apiRequest.fetchCategoryAndProduct { [weak self] (result) in
             guard let self = self else { return }
             switch result {
@@ -22,6 +33,7 @@ class HomeViewModel: NSObject {
                 self.category = categoryAndProductData.first?.data.category ?? [CategoryData]()
                 self.product = categoryAndProductData.first?.data.product ?? [ProductData]()
                 self.delegate?.didFinishGettingData()
+                self.isDataAlreadyAccessed = true
             case .failure(let error):
                 self.delegate?.failedToGetData(error)
             }

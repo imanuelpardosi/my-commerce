@@ -25,31 +25,11 @@ class SearchViewController: UIViewController {
         
         searchViewModel.product = productData
         
-        setupSearchBarStyle()
+        searchBar.setupSearchBarStyle()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-    }
-    
-    func setupSearchBarStyle() {
-        searchBar.becomeFirstResponder()
-        if let textfield = searchBar.value(forKey: "searchField") as? UITextField {
-            textfield.textColor = UIColor.black
-            textfield.backgroundColor = UIColor.white
-            textfield.borderStyle = .none
-            textfield.font = UIFont(name: "Helvetica", size: 13)
-            textfield.adjustsFontSizeToFitWidth = true
-            textfield.minimumFontSize = 8
-        }
-        searchBar.searchTextField.delegate = self
-        searchBar.layer.cornerRadius = 5
-        searchBar.layer.borderColor = UIColor.gray.withAlphaComponent(0.5).cgColor
-        searchBar.layer.borderWidth = 0.5
-        searchBar.clipsToBounds = true
-        searchBar.placeholder = "What do you want to buy?"
-        searchBar.backgroundImage = UIImage()
-        searchBar.searchTextPositionAdjustment = UIOffset(horizontal: 10, vertical: 0)
     }
     
     @IBAction func btnBackOnClick(_ sender: Any) {

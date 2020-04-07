@@ -14,6 +14,16 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     @IBOutlet weak var productTableView: UITableView!
     @IBOutlet weak var productTableViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action:
+            #selector(self.handleRefresh(_:)),
+                                 for: .valueChanged)
+        
+        return refreshControl
+    }()
     
     let homeViewModel = HomeViewModel()
 
@@ -21,35 +31,21 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         homeViewModel.delegate = self
-        homeViewModel.fetchCategoryAndProduct()
-        
-        setupSearchBarStyle()
+        scrollView.addSubview(refreshControl)
+        searchBar.setupSearchBarStyle()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
-        self.categoryCollectionView.reloadData()
-        self.productTableView.reloadData()
+        if homeViewModel.isDataExists == false {
+            homeViewModel.fetchCategoryAndProduct()
+            self.searchBar.isUserInteractionEnabled = false
+        }
     }
     
-    func setupSearchBarStyle() {
-        if let textfield = searchBar.value(forKey: "searchField") as? UITextField {
-            textfield.textColor = UIColor.black
-            textfield.backgroundColor = UIColor.white
-            textfield.borderStyle = .none
-            textfield.font = UIFont(name: "Helvetica", size: 13)
-            textfield.adjustsFontSizeToFitWidth = true
-            textfield.minimumFontSize = 8
-        }
-        
-        searchBar.layer.cornerRadius = 5
-        searchBar.layer.borderColor = UIColor.gray.withAlphaComponent(0.5).cgColor
-        searchBar.layer.borderWidth = 0.5
-        searchBar.clipsToBounds = true
-        searchBar.placeholder = "What do you want to buy?"
-        searchBar.backgroundImage = UIImage()
-        searchBar.searchTextPositionAdjustment = UIOffset(horizontal: 10, vertical: 0)
+    @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
+        homeViewModel.fetchCategoryAndProduct()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -62,13 +58,22 @@ class HomeViewController: UIViewController {
 }
 
 extension HomeViewController: HomeProtocol {
+    func willLoadData() {
+        self.view.showActivityIndicator()
+    }
+    
     func didFinishGettingData() {
         self.categoryCollectionView.reloadData()
         self.productTableView.reloadData()
+        self.refreshControl.endRefreshing()
+        self.view.hideActivityIndicator()
+        self.searchBar.isUserInteractionEnabled = true
     }
     
     func failedToGetData(_ error: Failure) {
         print("data failed: \(error)")
+        self.view.hideActivityIndicator()
+        self.searchBar.isUserInteractionEnabled = true
     }
 }
 

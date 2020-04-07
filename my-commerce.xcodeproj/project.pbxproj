@@ -34,6 +34,8 @@
 		57431350243CB39B00F95F96 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5743134F243CB39B00F95F96 /* ProfileViewController.swift */; };
 		57431352243CB48C00F95F96 /* PurchasedHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57431351243CB48C00F95F96 /* PurchasedHistoryViewController.swift */; };
 		57431354243CB8BC00F95F96 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57431353243CB8BC00F95F96 /* TabBarViewController.swift */; };
+		57431356243CC90200F95F96 /* UIView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57431355243CC90200F95F96 /* UIView + Extensions.swift */; };
+		57431358243CCD9600F95F96 /* UISearchBar + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57431357243CCD9600F95F96 /* UISearchBar + Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,8 @@
 		5743134F243CB39B00F95F96 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		57431351243CB48C00F95F96 /* PurchasedHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasedHistoryViewController.swift; sourceTree = "<group>"; };
 		57431353243CB8BC00F95F96 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		57431355243CC90200F95F96 /* UIView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extensions.swift"; sourceTree = "<group>"; };
+		57431357243CCD9600F95F96 /* UISearchBar + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearchBar + Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,6 +297,8 @@
 			isa = PBXGroup;
 			children = (
 				5743134B243CAE2C00F95F96 /* UIViewController + Extensions.swift */,
+				57431355243CC90200F95F96 /* UIView + Extensions.swift */,
+				57431357243CCD9600F95F96 /* UISearchBar + Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -440,6 +446,7 @@
 				57431338243B75E600F95F96 /* HomeViewModel.swift in Sources */,
 				57431340243C28AF00F95F96 /* ProductCell.swift in Sources */,
 				574312F0243B600700F95F96 /* AppDelegate.swift in Sources */,
+				57431356243CC90200F95F96 /* UIView + Extensions.swift in Sources */,
 				5743132D243B6A0900F95F96 /* Requestable.swift in Sources */,
 				5743134E243CB21F00F95F96 /* DetailViewController.swift in Sources */,
 				5743134C243CAE2C00F95F96 /* UIViewController + Extensions.swift in Sources */,
@@ -448,6 +455,7 @@
 				574312F2243B600700F95F96 /* SceneDelegate.swift in Sources */,
 				57431333243B71EB00F95F96 /* APIRequest.swift in Sources */,
 				57431349243CA70C00F95F96 /* SearchViewModel.swift in Sources */,
+				57431358243CCD9600F95F96 /* UISearchBar + Extensions.swift in Sources */,
 				5743132B243B66D700F95F96 /* APIManager + Dependencies.swift in Sources */,
 				5743133A243C170200F95F96 /* LoginViewController.swift in Sources */,
 			);

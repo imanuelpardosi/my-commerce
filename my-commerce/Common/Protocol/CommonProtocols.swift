@@ -9,6 +9,7 @@
 import Foundation
 
 protocol HomeProtocol: class {
+    func willLoadData()
     func didFinishGettingData()
     func failedToGetData(_ error: Failure)
 }
