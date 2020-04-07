@@ -30,6 +30,7 @@ class HomeViewController: UIViewController {
         super.viewWillAppear(true)
         
         self.categoryCollectionView.reloadData()
+        self.productTableView.reloadData()
     }
     
     func setupSearchBarStyle() {
@@ -41,6 +42,7 @@ class HomeViewController: UIViewController {
             textfield.adjustsFontSizeToFitWidth = true
             textfield.minimumFontSize = 8
         }
+        
         searchBar.layer.cornerRadius = 5
         searchBar.layer.borderColor = UIColor.gray.withAlphaComponent(0.5).cgColor
         searchBar.layer.borderWidth = 0.5
@@ -49,11 +51,20 @@ class HomeViewController: UIViewController {
         searchBar.backgroundImage = UIImage()
         searchBar.searchTextPositionAdjustment = UIOffset(horizontal: 10, vertical: 0)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "goGoSearchPage") {
+            if let nextVC = segue.destination as? SearchViewController {
+                nextVC.productData = homeViewModel.product
+            }
+        }
+    }
 }
 
 extension HomeViewController: HomeProtocol {
     func didFinishGettingData() {
         self.categoryCollectionView.reloadData()
+        self.productTableView.reloadData()
     }
     
     func failedToGetData(_ error: Failure) {
@@ -78,15 +89,22 @@ extension HomeViewController: UICollectionViewDataSource {
 
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        productTableViewHeight.constant = 20 * 153
-        return 20
+        productTableViewHeight.constant = CGFloat(homeViewModel.getNumberOfProduct() * 220)
+        return homeViewModel.getNumberOfProduct()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "productCell", for: indexPath) as? ProductCell
+        
+        cell?.configureCell(productData: homeViewModel.getProductForIndex(index: indexPath.row))
          
         return cell ?? UITableViewCell()
     }
-    
-    
+}
+
+extension HomeViewController: UISearchBarDelegate {
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchBar.endEditing(true)
+        self.performSegue(withIdentifier: "goGoSearchPage", sender: self)
+    }
 }
