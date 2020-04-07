@@ -14,7 +14,6 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     @IBOutlet weak var productTableView: UITableView!
     @IBOutlet weak var productTableViewHeight: NSLayoutConstraint!
-    @IBOutlet weak var scrollView: UIScrollView!
     
     let homeViewModel = HomeViewModel()
 
@@ -25,6 +24,12 @@ class HomeViewController: UIViewController {
         homeViewModel.fetchCategoryAndProduct()
         
         setupSearchBarStyle()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        self.categoryCollectionView.reloadData()
     }
     
     func setupSearchBarStyle() {
@@ -48,8 +53,7 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: HomeProtocol {
     func didFinishGettingData() {
-        print("data loaded")
-        print(homeViewModel.getNumberOfProduct())
+        self.categoryCollectionView.reloadData()
     }
     
     func failedToGetData(_ error: Failure) {
@@ -59,12 +63,14 @@ extension HomeViewController: HomeProtocol {
 
 extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return homeViewModel.getNumberOfCategory()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "categoryCell", for: indexPath) as? CategoryCell
+        
+        cell?.configureCell(categoryData: homeViewModel.getCategoryForIndex(index: indexPath.row))
         
         return cell ?? UICollectionViewCell()
     }

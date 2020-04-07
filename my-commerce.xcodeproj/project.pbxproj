@@ -26,6 +26,7 @@
 		5743133C243C1FD500F95F96 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5743133B243C1FD500F95F96 /* SearchViewController.swift */; };
 		5743133E243C26B800F95F96 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5743133D243C26B800F95F96 /* CategoryCell.swift */; };
 		57431340243C28AF00F95F96 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5743133F243C28AF00F95F96 /* ProductCell.swift */; };
+		57431345243C438600F95F96 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57431344243C438600F95F96 /* ImageDownloader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		5743133B243C1FD500F95F96 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		5743133D243C26B800F95F96 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		5743133F243C28AF00F95F96 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		57431344243C438600F95F96 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 		57431304243B620600F95F96 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				57431341243C436100F95F96 /* Classes */,
 				5743132E243B6A2800F95F96 /* Enums */,
 				57431336243B759700F95F96 /* Protocol */,
 			);
@@ -239,6 +242,30 @@
 				57431334243B759300F95F96 /* CommonProtocols.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		57431341243C436100F95F96 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				57431342243C436A00F95F96 /* Managers */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		57431342243C436A00F95F96 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				57431343243C437300F95F96 /* ImageDownloader */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		57431343243C437300F95F96 /* ImageDownloader */ = {
+			isa = PBXGroup;
+			children = (
+				57431344243C438600F95F96 /* ImageDownloader.swift */,
+			);
+			path = ImageDownloader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,6 +400,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5743133E243C26B800F95F96 /* CategoryCell.swift in Sources */,
+				57431345243C438600F95F96 /* ImageDownloader.swift in Sources */,
 				574312F4243B600700F95F96 /* HomeViewController.swift in Sources */,
 				57431335243B759300F95F96 /* CommonProtocols.swift in Sources */,
 				5743130C243B632600F95F96 /* CategoryProductModel.swift in Sources */,

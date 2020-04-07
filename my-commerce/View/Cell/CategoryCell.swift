@@ -10,4 +10,11 @@ import UIKit
 
 class CategoryCell: UICollectionViewCell {
     
+    @IBOutlet weak var imgIcon: UIImageView!
+    @IBOutlet weak var lblName: UILabel!
+    
+    func configureCell(categoryData: CategoryData) {
+        lblName.text = categoryData.name
+        imgIcon.downloaded(from: categoryData.imageUrl)
+    }
 }
