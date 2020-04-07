@@ -26,6 +26,7 @@ class SearchViewController: UIViewController {
         searchViewModel.product = productData
         
         searchBar.setupSearchBarStyle()
+        searchBar.becomeFirstResponder()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,6 +35,15 @@ class SearchViewController: UIViewController {
     
     @IBAction func btnBackOnClick(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "searchToDetail") {
+            guard let productData = sender as? ProductData else { return }
+            if let nextVC = segue.destination as? DetailViewController {
+                nextVC.productData = productData
+            }
+        }
     }
 }
 
@@ -71,5 +81,9 @@ extension SearchViewController: UITableViewDataSource {
 extension SearchViewController: UITableViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         self.dismissKeyboard()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "searchToDetail", sender: searchViewModel.getFilteredProductForIndex(index: indexPath.row))
     }
 }

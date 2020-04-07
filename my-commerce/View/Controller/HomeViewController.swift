@@ -54,6 +54,13 @@ class HomeViewController: UIViewController {
                 nextVC.productData = homeViewModel.product
             }
         }
+        
+        if (segue.identifier == "homeToDetail") {
+            guard let productData = sender as? ProductData else { return }
+            if let nextVC = segue.destination as? DetailViewController {
+                nextVC.productData = productData
+            }
+        }
     }
 }
 
@@ -104,6 +111,12 @@ extension HomeViewController: UITableViewDataSource {
         cell?.configureCell(productData: homeViewModel.getProductForIndex(index: indexPath.row))
          
         return cell ?? UITableViewCell()
+    }
+}
+
+extension HomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "homeToDetail", sender: homeViewModel.getProductForIndex(index: indexPath.row))
     }
 }
 

@@ -10,10 +10,23 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    @IBOutlet weak var imgIcon: UIImageView!
+    @IBOutlet weak var lblTitle: UILabel!
+    @IBOutlet weak var lblDescription: UILabel!
+    @IBOutlet weak var lblPrice: UILabel!
+    @IBOutlet weak var imgFavorite: UIImageView!
+    
+    internal var productData: ProductData!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationController?.interactivePopGestureRecognizer?.delegate = self as? UIGestureRecognizerDelegate
+        
+        self.imgIcon.downloaded(from: productData.imageUrl)
+        self.lblTitle.text = productData.title
+        self.lblDescription.text = productData.description
+        self.lblPrice.text = productData.price
     }
     
     override func viewWillAppear(_ animated: Bool) {
