@@ -13,7 +13,7 @@
 		574312F7243B600700F95F96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 574312F5243B600700F95F96 /* Main.storyboard */; };
 		574312F9243B600900F95F96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 574312F8243B600900F95F96 /* Assets.xcassets */; };
 		574312FC243B600900F95F96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 574312FA243B600900F95F96 /* LaunchScreen.storyboard */; };
-		5743130C243B632600F95F96 /* CategoryProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5743130B243B632600F95F96 /* CategoryProductModel.swift */; };
+		5743130C243B632600F95F96 /* Category + Product Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5743130B243B632600F95F96 /* Category + Product Model.swift */; };
 		57431315243B668900F95F96 /* my_commerceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57431314243B668900F95F96 /* my_commerceUITests.swift */; };
 		57431323243B66A300F95F96 /* my_commerceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57431322243B66A300F95F96 /* my_commerceTests.swift */; };
 		5743132B243B66D700F95F96 /* APIManager + Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5743132A243B66D700F95F96 /* APIManager + Dependencies.swift */; };
@@ -27,7 +27,7 @@
 		5743133E243C26B800F95F96 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5743133D243C26B800F95F96 /* CategoryCell.swift */; };
 		57431340243C28AF00F95F96 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5743133F243C28AF00F95F96 /* ProductCell.swift */; };
 		57431345243C438600F95F96 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57431344243C438600F95F96 /* ImageDownloader.swift */; };
-		57431347243CA60B00F95F96 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57431346243CA60A00F95F96 /* SearchCell.swift */; };
+		57431347243CA60B00F95F96 /* ProductWithSmallIconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57431346243CA60A00F95F96 /* ProductWithSmallIconCell.swift */; };
 		57431349243CA70C00F95F96 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57431348243CA70C00F95F96 /* SearchViewModel.swift */; };
 		5743134C243CAE2C00F95F96 /* UIViewController + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5743134B243CAE2C00F95F96 /* UIViewController + Extensions.swift */; };
 		5743134E243CB21F00F95F96 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5743134D243CB21F00F95F96 /* DetailViewController.swift */; };
@@ -36,6 +36,11 @@
 		57431354243CB8BC00F95F96 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57431353243CB8BC00F95F96 /* TabBarViewController.swift */; };
 		57431356243CC90200F95F96 /* UIView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57431355243CC90200F95F96 /* UIView + Extensions.swift */; };
 		57431358243CCD9600F95F96 /* UISearchBar + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57431357243CCD9600F95F96 /* UISearchBar + Extensions.swift */; };
+		5743135A243D84BE00F95F96 /* ProductWithSmallIconCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57431359243D84BE00F95F96 /* ProductWithSmallIconCell.xib */; };
+		5743135D243D8D6B00F95F96 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5743135C243D8D6B00F95F96 /* UserDefaults.swift */; };
+		5743135F243D9B5200F95F96 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5743135E243D9B5200F95F96 /* DetailViewModel.swift */; };
+		57431361243DA9E100F95F96 /* PurchasedHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57431360243DA9E100F95F96 /* PurchasedHistoryViewModel.swift */; };
+		57431364243DC09600F95F96 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57431363243DC09600F95F96 /* Utility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +69,7 @@
 		574312F8243B600900F95F96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		574312FB243B600900F95F96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		574312FD243B600900F95F96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5743130B243B632600F95F96 /* CategoryProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryProductModel.swift; sourceTree = "<group>"; };
+		5743130B243B632600F95F96 /* Category + Product Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Category + Product Model.swift"; sourceTree = "<group>"; };
 		57431312243B668900F95F96 /* my-commerceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "my-commerceUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57431314243B668900F95F96 /* my_commerceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = my_commerceUITests.swift; sourceTree = "<group>"; };
 		57431316243B668900F95F96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -82,7 +87,7 @@
 		5743133D243C26B800F95F96 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		5743133F243C28AF00F95F96 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		57431344243C438600F95F96 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
-		57431346243CA60A00F95F96 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		57431346243CA60A00F95F96 /* ProductWithSmallIconCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductWithSmallIconCell.swift; sourceTree = "<group>"; };
 		57431348243CA70C00F95F96 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		5743134B243CAE2C00F95F96 /* UIViewController + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extensions.swift"; sourceTree = "<group>"; };
 		5743134D243CB21F00F95F96 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +96,11 @@
 		57431353243CB8BC00F95F96 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		57431355243CC90200F95F96 /* UIView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extensions.swift"; sourceTree = "<group>"; };
 		57431357243CCD9600F95F96 /* UISearchBar + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearchBar + Extensions.swift"; sourceTree = "<group>"; };
+		57431359243D84BE00F95F96 /* ProductWithSmallIconCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductWithSmallIconCell.xib; sourceTree = "<group>"; };
+		5743135C243D8D6B00F95F96 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		5743135E243D9B5200F95F96 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		57431360243DA9E100F95F96 /* PurchasedHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasedHistoryViewModel.swift; sourceTree = "<group>"; };
+		57431363243DC09600F95F96 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,9 +178,11 @@
 		57431304243B620600F95F96 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				57431362243DC07F00F95F96 /* Utility */,
 				5743134A243CAE1A00F95F96 /* Extensions */,
 				57431341243C436100F95F96 /* Classes */,
 				5743132E243B6A2800F95F96 /* Enums */,
+				5743135B243D8D4F00F95F96 /* UserDefaults */,
 				57431336243B759700F95F96 /* Protocol */,
 			);
 			path = Common;
@@ -179,7 +191,7 @@
 		57431306243B628200F95F96 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5743130B243B632600F95F96 /* CategoryProductModel.swift */,
+				5743130B243B632600F95F96 /* Category + Product Model.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -189,6 +201,8 @@
 			children = (
 				57431337243B75E600F95F96 /* HomeViewModel.swift */,
 				57431348243CA70C00F95F96 /* SearchViewModel.swift */,
+				5743135E243D9B5200F95F96 /* DetailViewModel.swift */,
+				57431360243DA9E100F95F96 /* PurchasedHistoryViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -221,7 +235,8 @@
 			children = (
 				5743133D243C26B800F95F96 /* CategoryCell.swift */,
 				5743133F243C28AF00F95F96 /* ProductCell.swift */,
-				57431346243CA60A00F95F96 /* SearchCell.swift */,
+				57431346243CA60A00F95F96 /* ProductWithSmallIconCell.swift */,
+				57431359243D84BE00F95F96 /* ProductWithSmallIconCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -301,6 +316,22 @@
 				57431357243CCD9600F95F96 /* UISearchBar + Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5743135B243D8D4F00F95F96 /* UserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				5743135C243D8D6B00F95F96 /* UserDefaults.swift */,
+			);
+			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		57431362243DC07F00F95F96 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				57431363243DC09600F95F96 /* Utility.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -408,6 +439,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				574312FC243B600900F95F96 /* LaunchScreen.storyboard in Resources */,
+				5743135A243D84BE00F95F96 /* ProductWithSmallIconCell.xib in Resources */,
 				574312F9243B600900F95F96 /* Assets.xcassets in Resources */,
 				574312F7243B600700F95F96 /* Main.storyboard in Resources */,
 			);
@@ -434,15 +466,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57431364243DC09600F95F96 /* Utility.swift in Sources */,
 				5743133E243C26B800F95F96 /* CategoryCell.swift in Sources */,
-				57431347243CA60B00F95F96 /* SearchCell.swift in Sources */,
+				57431347243CA60B00F95F96 /* ProductWithSmallIconCell.swift in Sources */,
 				57431354243CB8BC00F95F96 /* TabBarViewController.swift in Sources */,
 				57431352243CB48C00F95F96 /* PurchasedHistoryViewController.swift in Sources */,
+				57431361243DA9E100F95F96 /* PurchasedHistoryViewModel.swift in Sources */,
 				57431350243CB39B00F95F96 /* ProfileViewController.swift in Sources */,
 				57431345243C438600F95F96 /* ImageDownloader.swift in Sources */,
+				5743135D243D8D6B00F95F96 /* UserDefaults.swift in Sources */,
 				574312F4243B600700F95F96 /* HomeViewController.swift in Sources */,
 				57431335243B759300F95F96 /* CommonProtocols.swift in Sources */,
-				5743130C243B632600F95F96 /* CategoryProductModel.swift in Sources */,
+				5743135F243D9B5200F95F96 /* DetailViewModel.swift in Sources */,
+				5743130C243B632600F95F96 /* Category + Product Model.swift in Sources */,
 				57431338243B75E600F95F96 /* HomeViewModel.swift in Sources */,
 				57431340243C28AF00F95F96 /* ProductCell.swift in Sources */,
 				574312F0243B600700F95F96 /* AppDelegate.swift in Sources */,

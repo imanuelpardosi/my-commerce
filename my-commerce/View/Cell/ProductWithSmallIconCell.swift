@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchCell: UITableViewCell {
+class ProductWithSmallIconCell: UITableViewCell {
 
     @IBOutlet weak var imgIcon: UIImageView!
     @IBOutlet weak var lblName: UILabel!

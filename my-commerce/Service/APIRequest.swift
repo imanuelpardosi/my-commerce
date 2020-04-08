@@ -18,7 +18,6 @@ class APIRequest: NSObject, Requestable {
                 do {
                     let decoder = JSONDecoder()
                     let categoryAndProduct = try decoder.decode([CategoryProductModel].self, from: categoryAndProductData)
-                    print("categoryAndProduct: \(categoryAndProduct)")
                     callback(.success(categoryAndProduct))
                 } catch {
                     callback(.failure(.decodeFailure))

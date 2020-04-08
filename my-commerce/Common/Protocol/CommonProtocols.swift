@@ -13,3 +13,8 @@ protocol HomeProtocol: class {
     func didFinishGettingData()
     func failedToGetData(_ error: Failure)
 }
+
+protocol DetailProtocol: class {
+    func didFinishBuyProduct()
+    func failedToBuyProduct(_ error: Failure)
+}

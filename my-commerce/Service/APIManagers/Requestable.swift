@@ -11,6 +11,7 @@ import UIKit
 typealias Handler = (Result<Data>) -> Void
 typealias DefaultCallBack = (DefaultResult<Data>) -> Void
 typealias CompletionHandler = (CategoryAndProductResult<[CategoryProductModel]>) -> Void
+typealias ProductDataCallBack = (DefaultResult<[ProductData]>) -> Void
 
 enum Method {
     case get
@@ -76,13 +77,13 @@ extension Requestable {
             DispatchQueue.main.async {
                 
                 //PRINT RESPONSE
-                if data != nil {
-                    if let json = try? JSONSerialization.jsonObject(with: data!, options: .mutableContainers), let jsonData = try? JSONSerialization.data(withJSONObject: json, options: .prettyPrinted) {
-                        print(String(decoding: jsonData, as: UTF8.self))
-                    } else {
-                        print("json data malformed")
-                    }
-                }
+//                if data != nil {
+//                    if let json = try? JSONSerialization.jsonObject(with: data!, options: .mutableContainers), let jsonData = try? JSONSerialization.data(withJSONObject: json, options: .prettyPrinted) {
+//                        print(String(decoding: jsonData, as: UTF8.self))
+//                    } else {
+//                        print("json data malformed")
+//                    }
+//                }
                 
                 if let error = error {
                     print(error.localizedDescription)

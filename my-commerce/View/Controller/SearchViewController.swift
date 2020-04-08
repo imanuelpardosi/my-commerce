@@ -20,6 +20,10 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         
         self.navigationController?.interactivePopGestureRecognizer?.delegate = self as? UIGestureRecognizerDelegate
+        
+        let productCell = UINib(nibName: "ProductWithSmallIconCell", bundle: nil)
+        searchTableView?.register(productCell, forCellReuseIdentifier: "productWithSmallIconCell")
+        
         self.searchTableView.tableFooterView = UIView()
         self.hideKeyboardTappedAround()
         
@@ -71,7 +75,7 @@ extension SearchViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "searchCell", for: indexPath) as? SearchCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "productWithSmallIconCell", for: indexPath) as? ProductWithSmallIconCell
         cell?.configureCell(productData: searchViewModel.getFilteredProductForIndex(index: indexPath.row))
         
         return cell ?? UITableViewCell()

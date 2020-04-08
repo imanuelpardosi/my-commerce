@@ -11,6 +11,7 @@ import Foundation
 enum Failure: Error {
     case apiFailure
     case decodeFailure
+    case dataAlreadyExists
     
     var message: String {
         switch self {
@@ -18,6 +19,8 @@ enum Failure: Error {
             return "Failed"
         case .decodeFailure:
             return "Something went wrong"
+        case .dataAlreadyExists:
+            return "Data already exists"
         }
     }
 }

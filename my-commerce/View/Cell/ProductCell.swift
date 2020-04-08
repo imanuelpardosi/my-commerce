@@ -23,11 +23,17 @@ class ProductCell: UITableViewCell {
         cardView.layer.shadowRadius = 5
         cardView.layer.shadowOpacity = 0.5
         cardView.layer.shadowOffset = CGSize(width:0, height: 2)
-        cardView.layer.cornerRadius = 5
+        cardView.layer.cornerRadius = 7
     }
     
     func configureCell(productData: ProductData) {
         lblName.text = productData.title
         imgIcon.downloaded(from: productData.imageUrl, contentMode: .scaleAspectFit)
+        
+        if productData.loved == 1 {
+            imgFavorite.image = UIImage(named: "ic_favorite_pink")
+        } else {
+            imgFavorite.image = UIImage(named: "ic_favorite_grey")
+        }
     }
 }

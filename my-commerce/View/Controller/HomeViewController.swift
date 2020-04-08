@@ -16,6 +16,9 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var productTableViewHeight: NSLayoutConstraint!
     @IBOutlet weak var scrollView: UIScrollView!
     
+    @IBOutlet weak var titleCategory: UILabel!
+    @IBOutlet weak var titleProduct: UILabel!
+    
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action:
@@ -66,7 +69,9 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: HomeProtocol {
     func willLoadData() {
-        self.view.showActivityIndicator()
+        if homeViewModel.isDataExists == false {
+            self.view.showActivityIndicator()
+        }
     }
     
     func didFinishGettingData() {
@@ -75,10 +80,15 @@ extension HomeViewController: HomeProtocol {
         self.refreshControl.endRefreshing()
         self.view.hideActivityIndicator()
         self.searchBar.isUserInteractionEnabled = true
+        
+        self.titleCategory.isHidden = false
+        self.titleProduct.isHidden = false
     }
     
     func failedToGetData(_ error: Failure) {
-        print("data failed: \(error)")
+        
+        Utility.showAlert(toController: self, withTitle: "Error", withMessage: error.message)
+        
         self.view.hideActivityIndicator()
         self.searchBar.isUserInteractionEnabled = true
     }

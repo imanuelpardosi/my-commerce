@@ -18,22 +18,51 @@ class DetailViewController: UIViewController {
     
     internal var productData: ProductData!
     
+    let detailViewModel = DetailViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationController?.interactivePopGestureRecognizer?.delegate = self as? UIGestureRecognizerDelegate
         
+        detailViewModel.delegate = self
+        
         self.imgIcon.downloaded(from: productData.imageUrl)
         self.lblTitle.text = productData.title
         self.lblDescription.text = productData.description
         self.lblPrice.text = productData.price
+        
+        if productData.loved == 1 {
+            self.imgFavorite.image = UIImage(named: "ic_favorite_pink")
+        } else {
+            self.imgFavorite.image = UIImage(named: "ic_favorite_grey")
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
     }
     
     @IBAction func btnBackOnClick(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func btnBuyOnClick(_ sender: Any) {
+        detailViewModel.addPurchasedProduct(product: productData)
+    }
+    
+    @IBAction func btnShareProductOnClick(_ sender: UIButton) {
+        detailViewModel.shareProduct(vc: self, productData: productData)
+    }
+}
+
+extension DetailViewController: DetailProtocol {
+    func didFinishBuyProduct() {
+        Utility.showAlert(toController: self, withTitle: "Success", withMessage: "Added to Purchased Product")
+    }
+    
+    func failedToBuyProduct(_ error: Failure) {
+        Utility.showAlert(toController: self, withTitle: "Error", withMessage: error.message)
     }
 }
