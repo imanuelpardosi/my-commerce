@@ -14,7 +14,7 @@ extension UIView {
         if let activityIndicator = self.viewWithTag(123) as? UIActivityIndicatorView {
             activityIndicator.startAnimating()
         } else {
-            let activityIndicatorView = UIActivityIndicatorView(style: .gray)
+            let activityIndicatorView = UIActivityIndicatorView(style: .medium)
             activityIndicatorView.translatesAutoresizingMaskIntoConstraints = false
             activityIndicatorView.tag = 123
             self.addSubview(activityIndicatorView)

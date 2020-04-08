@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>60070219150-05gdmqe622neqpment8t578bigdj8c1p.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.60070219150-05gdmqe622neqpment8t578bigdj8c1p</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCecowsGRfAVmqmMbOKHpbsfJ7mpVw4IVQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>60070219150</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>ipardosi.my-commerce</string>
+	<key>PROJECT_ID</key>
+	<string>my-commerce-36f1a</string>
+	<key>STORAGE_BUCKET</key>
+	<string>my-commerce-36f1a.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:60070219150:ios:5bba5c20a7f1c1b44aa8df</string>
+	<key>DATABASE_URL</key>
+	<string>https://my-commerce-36f1a.firebaseio.com</string>
+</dict>
+</plist>

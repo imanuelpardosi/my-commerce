@@ -64,9 +64,30 @@
                                             <segue destination="oO8-4e-o0X" kind="presentation" id="y2J-tl-jlY"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UfA-K4-EZ5">
+                                        <rect key="frame" x="91" y="276" width="200" height="44"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="DKg-u2-yNT"/>
+                                            <constraint firstAttribute="width" constant="200" id="L3Q-vI-gH7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <state key="normal" title="Sign in with Google">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnSignInGoogleOnClick" destination="f7Y-Tx-MuP" eventType="touchUpInside" id="e9r-Zj-hZf"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="UfA-K4-EZ5" firstAttribute="centerX" secondItem="nIt-aB-fgN" secondAttribute="centerX" id="2j0-XU-kJh"/>
                                     <constraint firstAttribute="height" constant="500" id="45O-9V-kwB"/>
                                     <constraint firstItem="AFb-HA-HHj" firstAttribute="top" secondItem="nIt-aB-fgN" secondAttribute="top" constant="16" id="4fq-tV-VCJ"/>
                                     <constraint firstAttribute="trailing" secondItem="xPK-BG-rRM" secondAttribute="trailing" constant="16" id="Esw-pI-ogK"/>
@@ -76,6 +97,7 @@
                                     <constraint firstItem="S49-Dg-Yq7" firstAttribute="leading" secondItem="nIt-aB-fgN" secondAttribute="leading" constant="16" id="NBH-er-syR"/>
                                     <constraint firstAttribute="trailing" secondItem="AFb-HA-HHj" secondAttribute="trailing" constant="16" id="VA0-OR-IF0"/>
                                     <constraint firstAttribute="trailing" secondItem="S49-Dg-Yq7" secondAttribute="trailing" constant="16" id="W0e-kK-3id"/>
+                                    <constraint firstItem="UfA-K4-EZ5" firstAttribute="top" secondItem="xPK-BG-rRM" secondAttribute="bottom" constant="32" id="XYu-b8-qRR"/>
                                     <constraint firstItem="S49-Dg-Yq7" firstAttribute="top" secondItem="AFb-HA-HHj" secondAttribute="bottom" constant="24" id="eP0-ib-9vD"/>
                                     <constraint firstItem="flo-Rg-pLs" firstAttribute="leading" secondItem="nIt-aB-fgN" secondAttribute="leading" constant="16" id="hrg-L9-okC"/>
                                     <constraint firstAttribute="trailing" secondItem="flo-Rg-pLs" secondAttribute="trailing" constant="16" id="n5D-pJ-VmE"/>
@@ -488,7 +510,6 @@
         <!--Detail View Controller-->
         <scene sceneID="Pqz-nr-12v">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wyI-hk-MLE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController hidesBottomBarWhenPushed="YES" id="00t-vo-x98" customClass="DetailViewController" customModule="my_commerce" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LJf-SW-cf8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -696,6 +717,7 @@
                         <outlet property="lblTitle" destination="vIR-bd-4Cc" id="P4m-GW-faz"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wyI-hk-MLE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-901.44927536231887" y="3075.6696428571427"/>
         </scene>
@@ -718,7 +740,7 @@
         <!--Tab Bar View Controller-->
         <scene sceneID="iwU-dZ-PXP">
             <objects>
-                <tabBarController modalPresentationStyle="fullScreen" id="oO8-4e-o0X" customClass="TabBarViewController" customModule="my_commerce" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBarViewController" modalPresentationStyle="fullScreen" id="oO8-4e-o0X" customClass="TabBarViewController" customModule="my_commerce" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6bu-wg-hzz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
