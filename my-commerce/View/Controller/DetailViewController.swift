@@ -31,12 +31,7 @@ class DetailViewController: UIViewController {
         self.lblTitle.text = productData.title
         self.lblDescription.text = productData.description
         self.lblPrice.text = productData.price
-        
-        if productData.loved == 1 {
-            self.imgFavorite.image = UIImage(named: "ic_favorite_pink")
-        } else {
-            self.imgFavorite.image = UIImage(named: "ic_favorite_grey")
-        }
+        detailViewModel.setIconFavorite(imageView: self.imgFavorite, loved: productData.loved)
     }
     
     override func viewWillAppear(_ animated: Bool) {

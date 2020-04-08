@@ -15,6 +15,15 @@ class DetailViewModel: NSObject {
 }
 
 extension DetailViewModel {
+    
+    func setIconFavorite(imageView: UIImageView, loved: Int) {
+        if loved == 1 {
+            imageView.image = UIImage(named: "ic_favorite_pink")
+        } else {
+            imageView.image = UIImage(named: "ic_favorite_grey")
+        }
+    }
+    
     func addPurchasedProduct(product: ProductData) {
         PurchasedProductCache.addPurchasedProduct(product) { [weak self](result) in
             switch result {
