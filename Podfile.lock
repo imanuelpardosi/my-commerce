@@ -1,4 +1,14 @@
 PODS:
+  - FBSDKCoreKit (6.3.0):
+    - FBSDKCoreKit/Basics (= 6.3.0)
+    - FBSDKCoreKit/Core (= 6.3.0)
+  - FBSDKCoreKit/Basics (6.3.0)
+  - FBSDKCoreKit/Core (6.3.0):
+    - FBSDKCoreKit/Basics
+  - FBSDKLoginKit (6.3.0):
+    - FBSDKLoginKit/Login (= 6.3.0)
+  - FBSDKLoginKit/Login (6.3.0):
+    - FBSDKCoreKit (~> 6.3.0)
   - Firebase/Auth (6.5.0):
     - Firebase/CoreOnly
     - FirebaseAuth (~> 6.2.1)
@@ -43,11 +53,14 @@ PODS:
   - GTMSessionFetcher/Core (1.2.2)
 
 DEPENDENCIES:
+  - FBSDKLoginKit
   - Firebase/Auth
   - GoogleSignIn
 
 SPEC REPOS:
   trunk:
+    - FBSDKCoreKit
+    - FBSDKLoginKit
     - Firebase
     - FirebaseAuth
     - FirebaseAuthInterop
@@ -58,6 +71,8 @@ SPEC REPOS:
     - GTMSessionFetcher
 
 SPEC CHECKSUMS:
+  FBSDKCoreKit: 5d55c8f3007c9c49b793617b9102e46355fc7e17
+  FBSDKLoginKit: d46aa04d9bb9990a4deb6441736fae24a8c94496
   Firebase: dedc9e48ea3f3649ad5f6b982f8a0c73508a14b5
   FirebaseAuth: a06ad63e9bf4c86165b54cceb1c14d4f4c38d419
   FirebaseAuthInterop: 0ffa57668be100582bb7643d4fcb7615496c41fc
@@ -67,6 +82,6 @@ SPEC CHECKSUMS:
   GoogleUtilities: d2b0e277a95962e09bb27f5cd42f5f0b6a506c7d
   GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
 
-PODFILE CHECKSUM: c7ec7bab17f8b9c522b76b8bd98a501fe362bc91
+PODFILE CHECKSUM: a01cafdb13b7fa567bafcab8130dabc66cf30d81
 
 COCOAPODS: 1.8.4

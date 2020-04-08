@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import GoogleSignIn
+import FBSDKLoginKit
 
 class LoginViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
     
@@ -21,11 +22,30 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDeleg
         
         GIDSignIn.sharedInstance()?.uiDelegate = self
         GIDSignIn.sharedInstance().delegate = self
+        
     }
     
     @IBAction func btnSignInGoogleOnClick() {
         GIDSignIn.sharedInstance().signIn()
         
+    }
+    
+    @IBAction func btnSignInFacebookOnClick() {
+        let loginManager = LoginManager()
+        loginManager.logIn(permissions: [], from: self) { (result, error) in
+            guard error == nil else {
+                print(error!.localizedDescription)
+                return
+            }
+            
+            guard let result = result, !result.isCancelled else {
+                print("User cancelled login")
+                return
+            }
+            
+            let nextVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabBarViewController") as! TabBarViewController
+            self.present(nextVC, animated: false, completion: nil)
+        }
     }
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
@@ -41,7 +61,7 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDeleg
         print(user.profile.email ?? "no email")
         
         let nextVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabBarViewController") as! TabBarViewController
-        self.present(nextVC, animated: true, completion: nil)
+        self.present(nextVC, animated: false, completion: nil)
     }
     
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {

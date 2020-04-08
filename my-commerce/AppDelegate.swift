@@ -9,9 +9,9 @@
 import UIKit
 import Firebase
 import GoogleSignIn
+import FBSDKLoginKit
 
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+@UIApplicationMain class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
@@ -23,10 +23,53 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func applicationWillTerminate(_ application: UIApplication) {
+        
+        // Logout both Goole and Facebook account
+        
         GIDSignIn.sharedInstance()?.signOut()
+        
+        let loginManager = LoginManager()
+        loginManager.logOut()
     }
 
     // MARK: UISceneSession Lifecycle
+    
+//    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+//        let handledFB = FBSDKCoreKit.ApplicationDelegate.shared.application(app, open: url, options: options)
+//        let handledGoogle = GIDSignIn.sharedInstance().handle(url, sourceApplication: <#String?#>)
+//        return handledFB || handledGoogle
+//    }
+//
+//    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
+//
+//    }
+//
+//    open func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+//
+//    }
+    
+//    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+//        let handledFB = FBSDKCoreKit.ApplicationDelegate.shared.application(app, open: url, options: options)
+//        let handledGoogle = GIDSignIn.sharedInstance().handle(url, sourceApplication: nil, annotation: nil)
+//
+//        return handledFB || handledGoogle
+//    }
+    
+     //MARK: - Handle URL for FB and Google Sign -
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+
+        //handle the URL that your application receives at the end of the authentication process -
+        var flag: Bool = false
+        // handle Facebook url scheme
+        if let wasHandled: Bool = ApplicationDelegate.shared.application(application, open: url, sourceApplication: sourceApplication, annotation: annotation) {
+            flag = wasHandled
+        }
+        // handle Google url scheme
+        if let googlePlusFlag: Bool = GIDSignIn.sharedInstance().handle(url, sourceApplication: sourceApplication!, annotation: annotation) {
+            flag = googlePlusFlag
+        }
+        return flag
+    }
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.

@@ -8,6 +8,7 @@ target 'my-commerce' do
   # Pods for my-commerce
   pod 'Firebase/Auth'
   pod 'GoogleSignIn'
+  pod 'FBSDKLoginKit'
 
   target 'my-commerceTests' do
     inherit! :search_paths

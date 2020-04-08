@@ -84,6 +84,26 @@
                                             <action selector="btnSignInGoogleOnClick" destination="f7Y-Tx-MuP" eventType="touchUpInside" id="e9r-Zj-hZf"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aU0-Nz-E1M">
+                                        <rect key="frame" x="91" y="336" width="200" height="44"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="4pP-b2-4UO"/>
+                                            <constraint firstAttribute="width" constant="200" id="INn-ry-6OY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <state key="normal" title="Sign in with Facebook">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnSignInFacebookOnClick" destination="f7Y-Tx-MuP" eventType="touchUpInside" id="Hgk-uD-fhQ"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
@@ -97,8 +117,10 @@
                                     <constraint firstItem="S49-Dg-Yq7" firstAttribute="leading" secondItem="nIt-aB-fgN" secondAttribute="leading" constant="16" id="NBH-er-syR"/>
                                     <constraint firstAttribute="trailing" secondItem="AFb-HA-HHj" secondAttribute="trailing" constant="16" id="VA0-OR-IF0"/>
                                     <constraint firstAttribute="trailing" secondItem="S49-Dg-Yq7" secondAttribute="trailing" constant="16" id="W0e-kK-3id"/>
+                                    <constraint firstItem="aU0-Nz-E1M" firstAttribute="top" secondItem="UfA-K4-EZ5" secondAttribute="bottom" constant="16" id="WcN-JD-dgy"/>
                                     <constraint firstItem="UfA-K4-EZ5" firstAttribute="top" secondItem="xPK-BG-rRM" secondAttribute="bottom" constant="32" id="XYu-b8-qRR"/>
                                     <constraint firstItem="S49-Dg-Yq7" firstAttribute="top" secondItem="AFb-HA-HHj" secondAttribute="bottom" constant="24" id="eP0-ib-9vD"/>
+                                    <constraint firstItem="aU0-Nz-E1M" firstAttribute="centerX" secondItem="nIt-aB-fgN" secondAttribute="centerX" id="hNj-0f-h2C"/>
                                     <constraint firstItem="flo-Rg-pLs" firstAttribute="leading" secondItem="nIt-aB-fgN" secondAttribute="leading" constant="16" id="hrg-L9-okC"/>
                                     <constraint firstAttribute="trailing" secondItem="flo-Rg-pLs" secondAttribute="trailing" constant="16" id="n5D-pJ-VmE"/>
                                 </constraints>
