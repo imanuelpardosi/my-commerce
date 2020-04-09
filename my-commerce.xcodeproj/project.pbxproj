@@ -16,7 +16,6 @@
 		574312FC243B600900F95F96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 574312FA243B600900F95F96 /* LaunchScreen.storyboard */; };
 		5743130C243B632600F95F96 /* Category + Product Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5743130B243B632600F95F96 /* Category + Product Model.swift */; };
 		57431315243B668900F95F96 /* my_commerceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57431314243B668900F95F96 /* my_commerceUITests.swift */; };
-		57431323243B66A300F95F96 /* my_commerceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57431322243B66A300F95F96 /* my_commerceTests.swift */; };
 		5743132B243B66D700F95F96 /* APIManager + Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5743132A243B66D700F95F96 /* APIManager + Dependencies.swift */; };
 		5743132D243B6A0900F95F96 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5743132C243B6A0900F95F96 /* Requestable.swift */; };
 		57431331243B6A3E00F95F96 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57431330243B6A3E00F95F96 /* Enums.swift */; };
@@ -44,6 +43,10 @@
 		57431364243DC09600F95F96 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57431363243DC09600F95F96 /* Utility.swift */; };
 		57431368243DDFCF00F95F96 /* Pods_my_commerce.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7EB9EFEE0B5048ED2922AD9 /* Pods_my_commerce.framework */; };
 		57712DB4243E089500D56A9D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 57712DB3243E089500D56A9D /* GoogleService-Info.plist */; };
+		57712DB8243EC45200D56A9D /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57712DB7243EC45200D56A9D /* HomeViewModelTests.swift */; };
+		57712DBA243ECD4600D56A9D /* SearchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57712DB9243ECD4600D56A9D /* SearchViewModelTests.swift */; };
+		57712DBC243ED2A000D56A9D /* DetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57712DBB243ED2A000D56A9D /* DetailViewModelTests.swift */; };
+		57712DBE243EDBFA00D56A9D /* PurchasedHistoryViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57712DBD243EDBFA00D56A9D /* PurchasedHistoryViewModelTests.swift */; };
 		F124E2B5EC08950024D662CE /* Pods_my_commerceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E7058C412FD38216962DD3 /* Pods_my_commerceTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,7 +82,6 @@
 		57431314243B668900F95F96 /* my_commerceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = my_commerceUITests.swift; sourceTree = "<group>"; };
 		57431316243B668900F95F96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57431320243B66A300F95F96 /* my-commerceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "my-commerceTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		57431322243B66A300F95F96 /* my_commerceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = my_commerceTests.swift; sourceTree = "<group>"; };
 		57431324243B66A300F95F96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5743132A243B66D700F95F96 /* APIManager + Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIManager + Dependencies.swift"; sourceTree = "<group>"; };
 		5743132C243B6A0900F95F96 /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
@@ -110,6 +112,10 @@
 		57712DA8243DF3E900D56A9D /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GTMSessionFetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57712DAF243DF4FB00D56A9D /* FirebaseAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57712DB3243E089500D56A9D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		57712DB7243EC45200D56A9D /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		57712DB9243ECD4600D56A9D /* SearchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelTests.swift; sourceTree = "<group>"; };
+		57712DBB243ED2A000D56A9D /* DetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModelTests.swift; sourceTree = "<group>"; };
+		57712DBD243EDBFA00D56A9D /* PurchasedHistoryViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasedHistoryViewModelTests.swift; sourceTree = "<group>"; };
 		64E6C8551679A54AF3B5BF0A /* Pods-my-commerce.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-my-commerce.release.xcconfig"; path = "Target Support Files/Pods-my-commerce/Pods-my-commerce.release.xcconfig"; sourceTree = "<group>"; };
 		6E785FE8C3CF8DC537684A07 /* Pods-my-commerceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-my-commerceTests.debug.xcconfig"; path = "Target Support Files/Pods-my-commerceTests/Pods-my-commerceTests.debug.xcconfig"; sourceTree = "<group>"; };
 		92E7058C412FD38216962DD3 /* Pods_my_commerceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_my_commerceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -285,7 +291,10 @@
 		57431321243B66A300F95F96 /* my-commerceTests */ = {
 			isa = PBXGroup;
 			children = (
-				57431322243B66A300F95F96 /* my_commerceTests.swift */,
+				57712DB7243EC45200D56A9D /* HomeViewModelTests.swift */,
+				57712DB9243ECD4600D56A9D /* SearchViewModelTests.swift */,
+				57712DBB243ED2A000D56A9D /* DetailViewModelTests.swift */,
+				57712DBD243EDBFA00D56A9D /* PurchasedHistoryViewModelTests.swift */,
 				57431324243B66A300F95F96 /* Info.plist */,
 			);
 			path = "my-commerceTests";
@@ -703,7 +712,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57431323243B66A300F95F96 /* my_commerceTests.swift in Sources */,
+				57712DBA243ECD4600D56A9D /* SearchViewModelTests.swift in Sources */,
+				57712DB8243EC45200D56A9D /* HomeViewModelTests.swift in Sources */,
+				57712DBC243ED2A000D56A9D /* DetailViewModelTests.swift in Sources */,
+				57712DBE243EDBFA00D56A9D /* PurchasedHistoryViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

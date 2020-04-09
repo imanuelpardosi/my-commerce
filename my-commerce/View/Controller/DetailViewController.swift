@@ -27,16 +27,20 @@ class DetailViewController: UIViewController {
         
         detailViewModel.delegate = self
         
-        self.imgIcon.downloaded(from: productData.imageUrl)
-        self.lblTitle.text = productData.title
-        self.lblDescription.text = productData.description
-        self.lblPrice.text = productData.price
-        detailViewModel.setIconFavorite(imageView: self.imgFavorite, loved: productData.loved)
+        setupUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+    }
+    
+    private func setupUI() {
+        self.imgIcon.downloaded(from: productData.imageUrl)
+        self.lblTitle.text = productData.title
+        self.lblDescription.text = productData.description
+        self.lblPrice.text = productData.price
+        detailViewModel.setIconFavorite(imageView: self.imgFavorite, loved: productData.loved)
     }
     
     @IBAction func btnBackOnClick(_ sender: Any) {
@@ -58,6 +62,6 @@ extension DetailViewController: DetailProtocol {
     }
     
     func failedToBuyProduct(_ error: Failure) {
-        Utility.showAlert(toController: self, withTitle: "Error", withMessage: error.message)
+        Utility.showAlert(toController: self, withTitle: "Failed", withMessage: error.message)
     }
 }

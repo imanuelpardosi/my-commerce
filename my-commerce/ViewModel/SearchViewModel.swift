@@ -8,10 +8,14 @@
 
 import Foundation
 
-class SearchViewModel: NSObject {
+class SearchViewModel {
     
     var product = [ProductData]()
     var filteredData = [ProductData]()
+    
+    func assignProductData(data: [ProductData]) {
+        self.product = data
+    }
     
     func filterProduct(searchText: String) {
         if searchText == "" {

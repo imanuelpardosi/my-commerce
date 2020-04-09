@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class DetailViewModel: NSObject {
+class DetailViewModel {
     weak var delegate: DetailProtocol?
     
 }

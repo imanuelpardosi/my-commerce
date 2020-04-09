@@ -87,7 +87,7 @@ extension HomeViewController: HomeProtocol {
     
     func failedToGetData(_ error: Failure) {
         
-        Utility.showAlert(toController: self, withTitle: "Error", withMessage: error.message)
+        Utility.showAlert(toController: self, withTitle: "Failed", withMessage: error.message)
         
         self.view.hideActivityIndicator()
         self.searchBar.isUserInteractionEnabled = true

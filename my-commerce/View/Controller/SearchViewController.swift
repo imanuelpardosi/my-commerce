@@ -27,7 +27,7 @@ class SearchViewController: UIViewController {
         self.searchTableView.tableFooterView = UIView()
         self.hideKeyboardTappedAround()
         
-        searchViewModel.product = productData
+        searchViewModel.assignProductData(data: productData)
         
         searchBar.setupSearchBarStyle()
         searchBar.becomeFirstResponder()

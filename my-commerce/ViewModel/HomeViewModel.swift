@@ -8,7 +8,7 @@
 
 import Foundation
 
-class HomeViewModel: NSObject {
+class HomeViewModel {
    
     weak var delegate: HomeProtocol?
     var category = [CategoryData]()
@@ -23,6 +23,14 @@ class HomeViewModel: NSObject {
         }
     }
     
+    func assignCategoryData(data: [CategoryData]) {
+        self.category = data
+    }
+    
+    func assignProductData(data: [ProductData]) {
+        self.product = data
+    }
+    
     func fetchCategoryAndProduct() {
         let apiRequest = APIRequest()
         self.delegate?.willLoadData()
@@ -30,8 +38,9 @@ class HomeViewModel: NSObject {
             guard let self = self else { return }
             switch result {
             case .success(let categoryAndProductData):
-                self.category = categoryAndProductData.first?.data.category ?? [CategoryData]()
-                self.product = categoryAndProductData.first?.data.product ?? [ProductData]()
+                self.assignCategoryData(data: categoryAndProductData.first?.data.category ?? [CategoryData]())
+                self.assignProductData(data: categoryAndProductData.first?.data.product ?? [ProductData]())
+                
                 self.delegate?.didFinishGettingData()
                 self.isDataAlreadyAccessed = true
             case .failure(let error):

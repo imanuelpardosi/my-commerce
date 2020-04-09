@@ -36,7 +36,15 @@ struct PurchasedProductCache {
         }
     }
     
-    static func remove() {
-        UserDefaults.standard.removeObject(forKey: key)
+    static func removePurchasedProduct(product: ProductData) {
+        var productData = [ProductData]()
+        productData = self.retrievePurchasedProduct()
+        
+        print("remove")
+        if let idx = productData.firstIndex(where: { $0.id == product.id }) {
+            productData.remove(at: idx)
+            UserDefaults.standard.set(try? PropertyListEncoder().encode(productData), forKey: key)
+            print("idx: \(idx)")
+        }
     }
 }

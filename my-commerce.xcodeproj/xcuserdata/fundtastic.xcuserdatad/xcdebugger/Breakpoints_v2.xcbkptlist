@@ -32,7 +32,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "76"
                   endingLineNumber = "76"
-                  offsetFromSymbolStart = "1804">
+                  offsetFromSymbolStart = "1716">
                </Location>
                <Location
                   uuid = "C184196D-FC22-455C-B5B5-16E03BC28C9E - 56d8fd96a89af95b"
@@ -47,7 +47,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "77"
                   endingLineNumber = "77"
-                  offsetFromSymbolStart = "236">
+                  offsetFromSymbolStart = "278">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -96,7 +96,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
                   endingLineNumber = "15"
-                  offsetFromSymbolStart = "224">
+                  offsetFromSymbolStart = "125">
                </Location>
                <Location
                   uuid = "F34FEC93-00FF-426D-A679-7C2A9B5FFFCB - 27b18a60149d1c3b"
@@ -111,7 +111,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "17"
                   endingLineNumber = "17"
-                  offsetFromSymbolStart = "180">
+                  offsetFromSymbolStart = "190">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -190,8 +190,8 @@
             filePath = "my-commerce/View/Controller/DetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "btnBuyOnClick(_:)"
             landmarkType = "7">
          </BreakpointContent>

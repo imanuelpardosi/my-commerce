@@ -11,10 +11,8 @@ import Firebase
 import GoogleSignIn
 import FBSDKLoginKit
 
-class LoginViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
-    
-    @IBOutlet weak var signInButton: UIButton!
-    
+class LoginViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,6 +29,10 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDeleg
     }
     
     @IBAction func btnSignInFacebookOnClick() {
+        self.signInWithFacebook()
+    }
+    
+    private func signInWithFacebook() {
         let loginManager = LoginManager()
         loginManager.logIn(permissions: [], from: self) { (result, error) in
             guard error == nil else {
@@ -43,29 +45,23 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDeleg
                 return
             }
             
-            let nextVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabBarViewController") as! TabBarViewController
-            self.present(nextVC, animated: false, completion: nil)
+            self.goToTabBar()
         }
     }
     
+    private func goToTabBar() {
+        let nextVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabBarViewController") as! TabBarViewController
+        self.present(nextVC, animated: false, completion: nil)
+    }
+}
+
+extension LoginViewController: GIDSignInUIDelegate, GIDSignInDelegate{
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if let error = error {
             print(error)
             return
         }
-
-        guard let authentication = user.authentication else { return }
-        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
-                                                        accessToken: authentication.accessToken)
-        print(credential)
-        print(user.profile.email ?? "no email")
         
-        let nextVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tabBarViewController") as! TabBarViewController
-        self.present(nextVC, animated: false, completion: nil)
-    }
-    
-    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
-        // Perform any operations when the user disconnects from app here.
-        // ...
+        self.goToTabBar()
     }
 }

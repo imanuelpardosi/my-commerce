@@ -22,13 +22,13 @@ struct CategoryProductData: Codable {
     }
 }
 
-struct CategoryData: Codable {
+struct CategoryData: Codable, Equatable {
     var id: Int
     var name: String
     var imageUrl: String
 }
 
-struct ProductData: Codable {
+struct ProductData: Codable, Equatable {
     var id: String
     var imageUrl: String
     var title: String

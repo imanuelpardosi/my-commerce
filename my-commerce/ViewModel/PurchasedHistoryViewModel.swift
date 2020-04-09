@@ -8,9 +8,13 @@
 
 import Foundation
 
-class PurchasedHistoryViewModel: NSObject {
+class PurchasedHistoryViewModel {
     
-    let purchasedProduct = PurchasedProductCache.retrievePurchasedProduct()
+    var purchasedProduct = [ProductData]()
+    
+    init() {
+        purchasedProduct = PurchasedProductCache.retrievePurchasedProduct()
+    }
     
 }
 
