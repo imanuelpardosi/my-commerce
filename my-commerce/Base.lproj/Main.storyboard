@@ -142,7 +142,7 @@
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="HomeViewController" customModule="my_commerce" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeViewController" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="HomeViewController" customModule="my_commerce" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -378,6 +378,9 @@
                                     </searchBar>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_favorite_grey" translatesAutoresizingMaskIntoConstraints="NO" id="ott-5B-xp1">
                                         <rect key="frame" x="16" y="15" width="26" height="26"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="ic_love">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="26" id="B7L-W5-oDR"/>
                                             <constraint firstAttribute="height" constant="26" id="lnw-mC-gD8"/>
@@ -545,6 +548,9 @@
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gDq-eL-3lH">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="img_product">
+                                                    <bool key="isElement" value="YES"/>
+                                                </accessibility>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="180" id="yie-dH-tly"/>
                                                 </constraints>
@@ -554,6 +560,7 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vIR-bd-4Cc">
                                                         <rect key="frame" x="16" y="17.666666666666686" width="340" height="25"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="title"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="25" id="Wda-AA-9bn"/>
                                                         </constraints>
@@ -563,6 +570,9 @@
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_favorite_grey" translatesAutoresizingMaskIntoConstraints="NO" id="V0r-Qx-8de">
                                                         <rect key="frame" x="372" y="17" width="26" height="26"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="ic_love">
+                                                            <bool key="isElement" value="YES"/>
+                                                        </accessibility>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="26" id="dJw-S8-Ixo"/>
                                                             <constraint firstAttribute="width" constant="26" id="pan-RS-33V"/>
@@ -581,6 +591,7 @@
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9I-gp-rRE">
                                                 <rect key="frame" x="16" y="248" width="382" height="371"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="description"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="371" id="2cH-t0-z5h"/>
                                                 </constraints>
@@ -695,6 +706,7 @@
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qao-mL-3qH">
                                         <rect key="frame" x="68" y="17.666666666666629" width="200" height="25"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="price"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="Tuy-0f-Pzh"/>
                                             <constraint firstAttribute="height" constant="25" id="auD-Ik-3Qy"/>

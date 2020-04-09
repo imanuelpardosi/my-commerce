@@ -14,6 +14,7 @@ struct Utility {
     static func showAlert(toController controller: UIViewController, withTitle title: String?, withMessage message: String?){
         let alertController = UIAlertController.init(title: title, message: message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction.init(title: "Okay", style: .default, handler: nil))
+        alertController.restorationIdentifier = "alert"
         controller.present(alertController, animated: true, completion: nil)
     }
 }

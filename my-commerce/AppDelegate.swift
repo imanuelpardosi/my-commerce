@@ -59,16 +59,13 @@ import FBSDKLoginKit
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
 
         //handle the URL that your application receives at the end of the authentication process -
-        var flag: Bool = false
+        
         // handle Facebook url scheme
-        if let wasHandled: Bool = ApplicationDelegate.shared.application(application, open: url, sourceApplication: sourceApplication, annotation: annotation) {
-            flag = wasHandled
-        }
+        let wasHandled: Bool = ApplicationDelegate.shared.application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
         // handle Google url scheme
-        if let googlePlusFlag: Bool = GIDSignIn.sharedInstance().handle(url, sourceApplication: sourceApplication!, annotation: annotation) {
-            flag = googlePlusFlag
-        }
-        return flag
+        let googlePlusFlag: Bool = GIDSignIn.sharedInstance().handle(url, sourceApplication: sourceApplication!, annotation: annotation)
+        
+        return wasHandled || googlePlusFlag
     }
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {

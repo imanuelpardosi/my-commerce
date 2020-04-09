@@ -58,10 +58,10 @@ class DetailViewController: UIViewController {
 
 extension DetailViewController: DetailProtocol {
     func didFinishBuyProduct() {
-        Utility.showAlert(toController: self, withTitle: "Success", withMessage: "Added to Purchased Product")
+        Utility.showAlert(toController: self, withTitle: "Information", withMessage: "Added to Purchased Product")
     }
     
     func failedToBuyProduct(_ error: Failure) {
-        Utility.showAlert(toController: self, withTitle: "Failed", withMessage: error.message)
+        Utility.showAlert(toController: self, withTitle: "Information", withMessage: error.message)
     }
 }

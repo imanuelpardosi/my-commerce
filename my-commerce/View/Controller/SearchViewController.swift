@@ -30,7 +30,7 @@ class SearchViewController: UIViewController {
         searchViewModel.assignProductData(data: productData)
         
         searchBar.setupSearchBarStyle()
-        searchBar.becomeFirstResponder()
+        //searchBar.becomeFirstResponder()
     }
     
     override func viewWillAppear(_ animated: Bool) {
