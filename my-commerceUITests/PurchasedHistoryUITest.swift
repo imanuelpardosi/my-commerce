@@ -18,7 +18,6 @@ class PurchasedHistoryUITest: XCTestCase {
     }
     
     func test_purchased_history_screen_component() {
-        
         let app = XCUIApplication()
         app.buttons["Sign In"].tap()
         

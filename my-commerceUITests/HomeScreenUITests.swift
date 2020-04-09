@@ -18,7 +18,6 @@ class HomeScreenUITests: XCTestCase {
     }
 
     func test_home_screen_component() {
-        
         let app = XCUIApplication()
 
         let signInButton = app.buttons["Sign In"]

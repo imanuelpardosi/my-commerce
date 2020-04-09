@@ -18,7 +18,6 @@ class DetailScreenUITests: XCTestCase {
     }
     
     func test_detail_screen_component() {
-        
         let app = XCUIApplication()
         app.buttons["Sign In"].tap()
         
@@ -48,7 +47,6 @@ class DetailScreenUITests: XCTestCase {
     }
     
     func test_buy_product() {
-        
         let app = XCUIApplication()
         app.buttons["Sign In"].tap()
         
@@ -67,7 +65,6 @@ class DetailScreenUITests: XCTestCase {
     }
     
     func test_share_product() {
-        
         let app = XCUIApplication()
         app.buttons["Sign In"].tap()
         

@@ -20,12 +20,10 @@ class LoginViewController: UIViewController {
         
         GIDSignIn.sharedInstance()?.uiDelegate = self
         GIDSignIn.sharedInstance().delegate = self
-        
     }
     
     @IBAction func btnSignInGoogleOnClick() {
         GIDSignIn.sharedInstance().signIn()
-        
     }
     
     @IBAction func btnSignInFacebookOnClick() {

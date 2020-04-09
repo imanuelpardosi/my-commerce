@@ -18,7 +18,6 @@ class SearchScreenUITests: XCTestCase {
     }
     
     func test_search_screen_component() {
-        
         let app = XCUIApplication()
         app.buttons["Sign In"].tap()
         

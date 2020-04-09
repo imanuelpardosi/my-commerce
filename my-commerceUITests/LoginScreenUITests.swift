@@ -18,7 +18,6 @@ class LoginScreenUITests: XCTestCase {
     }
 
     func test_login() {
-        
         let app = XCUIApplication()
         
         let userNameTextField = app.textFields["Username"]

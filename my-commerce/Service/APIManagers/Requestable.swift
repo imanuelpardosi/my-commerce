@@ -66,7 +66,6 @@ extension Requestable {
         
         var request = URLRequest(url: url)
         
-        print("url: \(url)")
         if let params = params {
             request.setValue(contentType.json.rawValue, forHTTPHeaderField: HTTPHeaderField.contentType.rawValue)
             request.httpBody = try? JSONSerialization.data(withJSONObject: params, options: JSONSerialization.WritingOptions.prettyPrinted)
@@ -75,16 +74,6 @@ extension Requestable {
         
         let task = URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) in
             DispatchQueue.main.async {
-                
-                //PRINT RESPONSE
-//                if data != nil {
-//                    if let json = try? JSONSerialization.jsonObject(with: data!, options: .mutableContainers), let jsonData = try? JSONSerialization.data(withJSONObject: json, options: .prettyPrinted) {
-//                        print(String(decoding: jsonData, as: UTF8.self))
-//                    } else {
-//                        print("json data malformed")
-//                    }
-//                }
-                
                 if let error = error {
                     print(error.localizedDescription)
                     callback(.failure(500))

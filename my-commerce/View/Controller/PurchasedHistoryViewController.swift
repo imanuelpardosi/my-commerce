@@ -49,7 +49,6 @@ extension PurchasedHistoryViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "productWithSmallIconCell", for: indexPath) as? ProductWithSmallIconCell
         cell?.configureCell(productData: purchasedHistoryViewModel.getPurchasedProductForIndex(index: indexPath.row))
         

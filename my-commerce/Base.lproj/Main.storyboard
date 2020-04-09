@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nIt-aB-fgN">
-                                <rect key="frame" x="16" y="203" width="382" height="500"/>
+                                <rect key="frame" x="16" y="228" width="382" height="450"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOGIN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AFb-HA-HHj">
-                                        <rect key="frame" x="16" y="16" width="350" height="40"/>
+                                        <rect key="frame" x="16" y="32" width="350" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="Hxb-Wz-8PS"/>
                                         </constraints>
@@ -29,7 +29,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S49-Dg-Yq7">
-                                        <rect key="frame" x="16" y="80" width="350" height="44"/>
+                                        <rect key="frame" x="16" y="96" width="350" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="AcJ-eS-mKL"/>
                                         </constraints>
@@ -37,7 +37,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="flo-Rg-pLs">
-                                        <rect key="frame" x="16" y="140" width="350" height="44"/>
+                                        <rect key="frame" x="16" y="156" width="350" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="oqC-X9-fVO"/>
                                         </constraints>
@@ -45,7 +45,7 @@
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xPK-BG-rRM">
-                                        <rect key="frame" x="246" y="200" width="120" height="44"/>
+                                        <rect key="frame" x="246" y="216" width="120" height="44"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="90y-yG-lHF"/>
@@ -65,7 +65,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UfA-K4-EZ5">
-                                        <rect key="frame" x="91" y="276" width="200" height="44"/>
+                                        <rect key="frame" x="91" y="292" width="200" height="44"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="DKg-u2-yNT"/>
@@ -85,7 +85,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aU0-Nz-E1M">
-                                        <rect key="frame" x="91" y="336" width="200" height="44"/>
+                                        <rect key="frame" x="91" y="352" width="200" height="44"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="4pP-b2-4UO"/>
@@ -108,8 +108,8 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="UfA-K4-EZ5" firstAttribute="centerX" secondItem="nIt-aB-fgN" secondAttribute="centerX" id="2j0-XU-kJh"/>
-                                    <constraint firstAttribute="height" constant="500" id="45O-9V-kwB"/>
-                                    <constraint firstItem="AFb-HA-HHj" firstAttribute="top" secondItem="nIt-aB-fgN" secondAttribute="top" constant="16" id="4fq-tV-VCJ"/>
+                                    <constraint firstAttribute="height" constant="450" id="45O-9V-kwB"/>
+                                    <constraint firstItem="AFb-HA-HHj" firstAttribute="top" secondItem="nIt-aB-fgN" secondAttribute="top" constant="32" id="4fq-tV-VCJ"/>
                                     <constraint firstAttribute="trailing" secondItem="xPK-BG-rRM" secondAttribute="trailing" constant="16" id="Esw-pI-ogK"/>
                                     <constraint firstItem="flo-Rg-pLs" firstAttribute="top" secondItem="S49-Dg-Yq7" secondAttribute="bottom" constant="16" id="GYc-Lk-T0c"/>
                                     <constraint firstItem="AFb-HA-HHj" firstAttribute="leading" secondItem="nIt-aB-fgN" secondAttribute="leading" constant="16" id="Gla-Ff-aH3"/>
@@ -124,6 +124,11 @@
                                     <constraint firstItem="flo-Rg-pLs" firstAttribute="leading" secondItem="nIt-aB-fgN" secondAttribute="leading" constant="16" id="hrg-L9-okC"/>
                                     <constraint firstAttribute="trailing" secondItem="flo-Rg-pLs" secondAttribute="trailing" constant="16" id="n5D-pJ-VmE"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

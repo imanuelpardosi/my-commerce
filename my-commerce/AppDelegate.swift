@@ -23,43 +23,15 @@ import FBSDKLoginKit
     }
     
     func applicationWillTerminate(_ application: UIApplication) {
-        
         // Logout both Goole and Facebook account
-        
         GIDSignIn.sharedInstance()?.signOut()
         
         let loginManager = LoginManager()
         loginManager.logOut()
     }
 
-    // MARK: UISceneSession Lifecycle
-    
-//    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-//        let handledFB = FBSDKCoreKit.ApplicationDelegate.shared.application(app, open: url, options: options)
-//        let handledGoogle = GIDSignIn.sharedInstance().handle(url, sourceApplication: <#String?#>)
-//        return handledFB || handledGoogle
-//    }
-//
-//    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
-//
-//    }
-//
-//    open func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-//
-//    }
-    
-//    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-//        let handledFB = FBSDKCoreKit.ApplicationDelegate.shared.application(app, open: url, options: options)
-//        let handledGoogle = GIDSignIn.sharedInstance().handle(url, sourceApplication: nil, annotation: nil)
-//
-//        return handledFB || handledGoogle
-//    }
-    
-     //MARK: - Handle URL for FB and Google Sign -
+    //MARK: - Handle URL for FB and Google Sign -
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-
-        //handle the URL that your application receives at the end of the authentication process -
-        
         // handle Facebook url scheme
         let wasHandled: Bool = ApplicationDelegate.shared.application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
         // handle Google url scheme
